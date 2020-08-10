@@ -1976,18 +1976,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      route: window.location.origin + "/api/usuario/",
+      route: window.location.origin + '/api/usuarios/',
       data: []
     };
   },
   mounted: function mounted() {
-    this.getData();
+    this.usuario();
   },
   methods: {
-    getData: function getData() {
-      // axios.get(`${this.route}user-data`).then((res) => {
-      axios.get("/user").then(function (res) {
-        console.log(res.data); // this.data = res.data;
+    usuario: function usuario() {
+      var _this = this;
+
+      axios.get("".concat(this.route, "user-data")).then(function (res) {
+        _this.data = res.data;
       });
     }
   }
@@ -53396,8 +53397,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\laravelVue\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\laravelVue\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\laragon\www\laravelVueTest\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\laragon\www\laravelVueTest\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

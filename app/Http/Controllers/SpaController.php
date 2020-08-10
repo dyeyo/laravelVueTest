@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use Illuminate\Http\Request;
 
 class SpaController extends Controller
@@ -12,8 +11,4 @@ class SpaController extends Controller
     return view('spa');
   }
 
-  public function getData()
-  {
-    return User::all();
-  }
 }

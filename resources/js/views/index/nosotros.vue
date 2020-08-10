@@ -8,20 +8,18 @@
 export default {
   data() {
     return {
-      route: window.location.origin + "/api/usuario/",
-      data: [],
+      route: window.location.origin + '/api/usuarios/',
+      data: []
     };
   },
   mounted() {
-    this.getData();
+    this.usuario()
   },
   methods: {
-    getData() {
-      // axios.get(`${this.route}user-data`).then((res) => {
-      axios.get("/user").then((res) => {
-        console.log(res.data);
-        // this.data = res.data;
-      });
+    usuario() {
+      axios.get(`${this.route}user-data`).then(res=>{
+        this.data = res.data
+      })
     },
   },
 };

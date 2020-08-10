@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\usuarios;
 
 class UsersController extends Controller
 {
-  public function index()
+  public function getuser()
   {
-    return User::all();
+  	return usuarios::all();
   }
 }
